@@ -18,7 +18,7 @@
         <source media="(min-width: 726px)" srcset="assets/images/illustration-sign-up-desktop.svg">
         <img src="assets/images/illustration-sign-up-desktop.svg" alt="sign-up illustration" />
       </picture>
-      <form action="">
+      <form id="form" novalidate>
         <h1>Stay updated!</h1>
 
         <p>Join 60,000+ product managers receiving monthly updates on:</p>
@@ -41,12 +41,12 @@
         <div class="email">
           <div class="email-label">
             <label for="email">Email address</label>
-            <span id="email-log"></span>
+            <span id="email-log" aria-live="polite"></span>
           </div>
           <input type="email" name="email" id="email" placeholder="email@company.com" />
         </div>
 
-        <button type="submit">Subscribe to monthly newsletter</button>
+        <button>Subscribe to monthly newsletter</button>
       </form>
     </article>
     <article class="success-message">
@@ -59,10 +59,9 @@
           inside to confirm your subscription.
         </p>
       </div>
-      <button type="button">Dismiss message</button>
+      <button>Dismiss message</button>
     </article>
   </main>
-
   <footer class="attribution">
     <p>
       Challenge by
@@ -70,6 +69,8 @@
       <a href="https://www.frontendmentor.io/profile/MrRyt247" target="_blank" rel="noopener">Mr. Ryt</a>.
     </p>
   </footer>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <script src="script.js"></script>
 </body>
 
 </html>

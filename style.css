@@ -1,12 +1,10 @@
 :root {
-  --tomato: hsl(4, 100%, 67%);
+  --tomato: hsla(4, 100%, 67%, 0.708);
   --darkSlateGrey: hsl(234, 29%, 20%);
   --charcoalGrey: hsl(235, 18%, 26%);
   --gray: hsl(231, 7%, 60%);
   --white: hsl(0, 0%, 100%);
 }
-
-/* - Weights: 400, 700 */
 
 * {
   margin: 0;
@@ -48,14 +46,7 @@ body {
   flex-direction: row-reverse;
   justify-content: space-between;
   align-items: center;
-  /* column-gap: 1.25rem; */
   width: clamp(350px, 80vw, 900px);
-  height: clamp(501px, 60vh, 522px);
-  /* margin-block: auto;
-  margin-inline: auto; */
-  /* font-family: Figtree, system-ui, sans-serif; */
-  /* font-weight: 700; */
-  /* border: solid 1px var(--black); */
   border-radius: 20px;
   padding: 1.25rem;
   color: var(--darkSlateGrey);
@@ -68,23 +59,21 @@ body {
     display: flex;
     justify-content: center;
     flex-shrink: 0;
-    height: clamp(501px - 3rem, 60vh - 3rem, 522px - 3rem);
-    width: clamp(200px, 37.5vw, 320px);
+    height: clamp(400, 70vh, 593px);
+    width: clamp(200px, 38vw, 400px);
     overflow: hidden;
     border-radius: 12px;
 
     img {
-      height: inherit;
-      width: 320px;
+      height: 593px;
+      width: 400px;
     }
   }
-  display: none;
 
   form {
     display: flex;
     flex-direction: column;
-    flex-grow: 1;
-    width: clamp(250px, 60vw, 540px);
+    width: clamp(250px, 60vw, 440px);
     padding: 1.25rem;
     justify-content: center;
     row-gap: 1rem;
@@ -118,15 +107,28 @@ body {
       width: auto;
       row-gap: 0.25rem;
 
-      label {
-        font-weight: 700;
-        color: var(--darkSlateGrey);
+      .email-label {
+        display: flex;
+        justify-content: space-between;
+
+        label {
+          font-size: 0.8rem;
+          font-weight: 700;
+          color: var(--darkSlateGrey);
+        }
+
+        #email-log {
+          font-size: 0.8rem;
+          font-weight: 700;
+          color: var(--tomato);
+        }
       }
 
       input {
         border: solid 1px var(--gray);
         border-radius: 5px;
         padding: 0.75rem;
+        color: var(--darkSlateGrey);
       }
 
       ::placeholder {
@@ -153,7 +155,7 @@ body {
   transform: translate(-50%, -50%);
   width: 350px;
   height: 350px;
-  display: flex;
+  display: none;
   flex-direction: column;
   justify-content: space-between;
   padding: 1.5rem 2rem 2rem 2rem;
@@ -192,6 +194,7 @@ body {
   font-family: monospace, "Courier New";
   font-size: 11px;
   font-weight: 700;
+  color: white;
   margin-inline: auto;
   -webkit-user-select: none;
   user-select: none;
@@ -254,5 +257,9 @@ body {
       margin-top: 15vh;
       row-gap: 1.5rem;
     }
+  }
+
+  .attribution {
+    color: black;
   }
 }
