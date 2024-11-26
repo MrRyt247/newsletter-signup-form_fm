@@ -130,20 +130,29 @@ body {
         padding: 0.75rem;
         color: var(--darkSlateGrey);
       }
-
+      input:hover {
+        border-color: var(--darkSlateGrey);
+        cursor: pointer;
+      }
       ::placeholder {
         color: var(--gray);
       }
     }
 
     button {
-      border: solid 1px;
+      border: solid 1px transparent;
       border-radius: 5px;
       background-color: var(--darkSlateGrey);
       color: var(--white);
       font-family: Roboto, Helvetica, sans-serif;
       font-weight: 700;
-      padding: 0.75rem;
+      padding: 1rem;
+    }
+
+    button:hover {
+      cursor: pointer;
+      background: linear-gradient(90deg, #ff5478, #ff693c);
+      box-shadow: 0 7px 20px 1px #ff693c89;
     }
   }
 }
@@ -180,13 +189,18 @@ body {
   }
 
   button {
-    border: solid 1px;
+    border: solid 1px transparent;
     border-radius: 5px;
     background-color: var(--darkSlateGrey);
     color: var(--white);
     font-family: Roboto, Helvetica, sans-serif;
     font-weight: 700;
-    padding: 0.75rem;
+    padding: 1rem;
+  }
+  button:hover {
+    cursor: pointer;
+    background: linear-gradient(90deg, #ff5478, #ff693c);
+    box-shadow: 0 7px 20px 1px #ff693c89;
   }
 }
 
@@ -243,6 +257,7 @@ body {
   form {
     width: unset !important;
     padding-top: 0;
+    row-gap: 1.5rem !important;
     justify-content: flex-start !important;
   }
 
